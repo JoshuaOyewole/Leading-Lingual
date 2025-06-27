@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/public/asset//logo.jpg" />
+    <link rel="icon" type="image/svg+xml" href="/asset/herro.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Leading Lingual:Knownledge is Power - Your Passport to Power</title>
   </head>
@@ -11,3 +11,15 @@
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
+<script>
+  // This script is used to handle the redirection to the payment page
+  // when the user clicks on the "Pay Now" button.
+  document.addEventListener("DOMContentLoaded", function () {
+    const payNowButton = document.querySelector("#pay-now-button");
+    if (payNowButton) {
+      payNowButton.addEventListener("click", function () {
+        window.location.href = "/payment";
+      });
+    }
+  });
+</script>

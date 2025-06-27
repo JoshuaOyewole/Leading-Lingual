@@ -1,6 +1,8 @@
 import { Button } from "./components/ui/button";
 import { CourseBadge } from "./Reusable/CourseBadge";
 import tech from "./../public/asset/group.jpg";
+import { useState } from "react";
+import CourseEnrollmentFlow from "./Payment";
 export const EquippedSection = () => {
   const courses = [
     "Data Analysis",
@@ -10,6 +12,10 @@ export const EquippedSection = () => {
     "Cyber Security",
   ];
 
+  const [showModal, setShowModal] = useState(false);
+  const handleClose = () => {
+    setShowModal(false);
+  };
   return (
     <section className="bg-gray-900 py-8 sm:py-12 md:py-16 lg:py-20 px-3 sm:px-4 md:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -28,8 +34,11 @@ export const EquippedSection = () => {
               mentorship, and career guidance
             </p>
 
-            <Button className="bg-red-500 hover:bg-red-600 text-white px-6 sm:px-8 py-2 sm:py-3 mb-6 sm:mb-8 text-sm sm:text-base md:text-lg rounded-lg">
-              Enquire
+            <Button
+              className="bg-red-500 hover:bg-red-600 text-white px-6 sm:px-8 py-2 sm:py-3 mb-6 sm:mb-8 text-sm sm:text-base md:text-lg rounded-lg"
+              onClick={() => setShowModal(true)}
+            >
+              Enrol
             </Button>
 
             <div className="flex flex-wrap gap-2 sm:gap-3">
@@ -49,6 +58,9 @@ export const EquippedSection = () => {
           </div>
         </div>
       </div>
+      {showModal && (
+        <CourseEnrollmentFlow isOpen={showModal} onClose={handleClose} />
+      )}
     </section>
   );
 };
