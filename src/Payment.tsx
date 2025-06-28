@@ -111,31 +111,31 @@ const CourseEnrollmentModal: React.FC<CourseEnrollmentModalProps> = ({
 
   const selectedCourse = courses.find((c) => c.id === selectedCourseId);
 
-  const downloadReceipt = () => {
-    if (!customerName || !customerEmail || !selectedCourse) return;
-    const content = `
-GSA Leading Lingual Course - Enrollment Receipt
+  //   const downloadReceipt = () => {
+  //     if (!customerName || !customerEmail || !selectedCourse) return;
+  //     const content = `
+  // GSA Leading Lingual Course - Enrollment Receipt
 
-Student Name: ${customerName}
-Email: ${customerEmail}
-Course: ${selectedCourse.name}
-Level: ${selectedCourse.level}
-Amount: ₦${selectedCourse.price.toLocaleString()}
+  // Student Name: ${customerName}
+  // Email: ${customerEmail}
+  // Course: ${selectedCourse.name}
+  // Level: ${selectedCourse.level}
+  // Amount: ₦${selectedCourse.price.toLocaleString()}
 
-Date: ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}
+  // Date: ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}
 
-This receipt, together with your Paystack payment receipt, confirms your registration.
-    `;
-    const blob = new Blob([content], { type: "text/plain" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = `GSA-Receipt-${customerName.replace(/\s+/g, "_")}.txt`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  };
+  // This receipt, together with your Paystack payment receipt, confirms your registration.
+  //     `;
+  //     const blob = new Blob([content], { type: "text/plain" });
+  //     const url = URL.createObjectURL(blob);
+  //     const a = document.createElement("a");
+  //     a.href = url;
+  //     a.download = `GSA-Receipt-${customerName.replace(/\s+/g, "_")}.txt`;
+  //     document.body.appendChild(a);
+  //     a.click();
+  //     document.body.removeChild(a);
+  //     URL.revokeObjectURL(url);
+  //   };
 
   return (
     <>
