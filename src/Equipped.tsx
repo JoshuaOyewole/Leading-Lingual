@@ -25,7 +25,8 @@ export const EquippedSection = () => {
               Get Equipped in Several Tech Skills For{" "}
               <span className="text-red-500">Free!</span>
               <p className="text-base text-red-500">
-                Tuition is free but certificate and registration fee is required{" "}
+                Tuition is free but certificate and registration fee is required
+                which is 10,000 naira{" "}
               </p>
             </h1>
 
