@@ -217,6 +217,10 @@ This receipt, together with your Paystack payment receipt, confirms your registr
                           </option>
                         ))}
                       </select>
+                      <p className="text-red-500">
+                        NB: Tuition is free but certificate and registration fee
+                        is required{" "}
+                      </p>
                     </div>
 
                     <button

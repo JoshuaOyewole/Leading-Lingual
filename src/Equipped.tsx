@@ -24,6 +24,9 @@ export const EquippedSection = () => {
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
               Get Equipped in Several Tech Skills For{" "}
               <span className="text-red-500">Free!</span>
+              <p className="text-xs text-red-500">
+                Tuition is free but certificate and registration fee is required{" "}
+              </p>
             </h1>
 
             <p className="text-gray-300 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base md:text-lg">
