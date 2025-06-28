@@ -93,8 +93,7 @@ const CourseEnrollmentModal: React.FC<CourseEnrollmentModalProps> = ({
   };
 
   const handlePaystackClick = () => {
-    setCurrentStep(3);
-    // The user will be routed to Paystack in a new tab, so we show instructions here
+    setCurrentStep(2);
   };
 
   const resetForm = () => {
@@ -287,7 +286,7 @@ This receipt, together with your Paystack payment receipt, confirms your registr
                 </div>
               )}
 
-              {currentStep === 3 && (
+              {/* {currentStep === 3 && (
                 <div>
                   <h3 className="text-lg font-medium mb-4 text-green-700">
                     Next Steps: Complete Your Registration
@@ -338,7 +337,7 @@ This receipt, together with your Paystack payment receipt, confirms your registr
                     If you have any issues, please contact support.
                   </div>
                 </div>
-              )}
+              )} */}
             </div>
           </div>
         </div>
