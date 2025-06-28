@@ -1,11 +1,5 @@
 import React, { useState } from "react";
-import {
-  AlertCircle,
-  X,
-  CreditCard,
-  Download,
-  MessageCircle,
-} from "lucide-react";
+import { AlertCircle, X, CreditCard } from "lucide-react";
 
 interface CourseEnrollmentModalProps {
   isOpen: boolean;
@@ -13,7 +7,7 @@ interface CourseEnrollmentModalProps {
 }
 
 const PAYSTACK_LINK = "https://paystack.shop/pay/gsaleadinglingual";
-const WHATSAPP_LINK = "https://chat.whatsapp.com/your-group-link"; // Replace with your WhatsApp group link
+// Replace with your WhatsApp group link
 
 const CourseEnrollmentModal: React.FC<CourseEnrollmentModalProps> = ({
   isOpen,
