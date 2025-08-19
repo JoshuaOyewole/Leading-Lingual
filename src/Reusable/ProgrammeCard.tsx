@@ -8,6 +8,7 @@ type ProgrammeCardProps = {
   description: string;
   price?: string | number;
   features: string[];
+  handleClick?: () => void;
 };
 
 export const ProgrammeCard = ({
@@ -17,6 +18,7 @@ export const ProgrammeCard = ({
   description,
   price,
   features,
+  handleClick = () => {},
 }: ProgrammeCardProps) => {
   return (
     <Card className="h-full hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-0 shadow-lg">
@@ -57,7 +59,10 @@ export const ProgrammeCard = ({
           </ul>
         </div>
 
-        <Button className="w-full bg-red-500 hover:bg-red-600 text-white py-2 sm:py-3 text-sm sm:text-base">
+        <Button
+          className="w-full bg-red-500 hover:bg-red-600 text-white py-2 sm:py-3 text-sm sm:text-base"
+          onClick={handleClick}
+        >
           Enroll Now
         </Button>
       </CardContent>

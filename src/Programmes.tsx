@@ -1,6 +1,20 @@
 import { ProgrammeCard } from "./Reusable/ProgrammeCard";
 
 export const Programmes = () => {
+  const handleEnrolClick = () => {
+    // closeMenu();
+    window.history.pushState(null, "", "#enrol");
+    // setActiveSection("enrol");
+
+    const element = document.getElementById("enrol");
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   const programmes = [
     {
       title: "Teacher Training & Certification",
@@ -83,7 +97,11 @@ export const Programmes = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {programmes.map((programme, index) => (
-            <ProgrammeCard key={index} {...programme} />
+            <ProgrammeCard
+              key={index}
+              {...programme}
+              handleClick={handleEnrolClick}
+            />
           ))}
         </div>
       </div>

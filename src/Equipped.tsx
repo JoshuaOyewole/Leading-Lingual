@@ -10,6 +10,8 @@ export const EquippedSection = () => {
     "Web Development",
     "Project Management",
     "Cyber Security",
+    " photo Editing and graphics",
+    "UI/UX Design",
   ];
 
   const [showModal, setShowModal] = useState(false);
