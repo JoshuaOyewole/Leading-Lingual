@@ -62,6 +62,24 @@ const CourseEnrollmentModal: React.FC<CourseEnrollmentModalProps> = ({
       level: "Beginner",
       price: 10000,
     },
+    {
+      id: "beginner7",
+      name: "Social Media management",
+      level: "Beginner",
+      price: 10000,
+    },
+    {
+      id: "beginner8",
+      name: " UI / UX design",
+      level: "Beginner",
+      price: 10000,
+    },
+    {
+      id: "beginner9",
+      name: "Photo Editing and Graphics Design",
+      level: "Beginner",
+      price: 10000,
+    },
   ];
 
   const validateForm = (): boolean => {
@@ -134,7 +152,7 @@ const CourseEnrollmentModal: React.FC<CourseEnrollmentModalProps> = ({
   return (
     <>
       {isOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+        <div className="fixed inset-0 bg-gradient-to-br from-white/10 to-black/10 backdrop-blur-lg flex items-center justify-center p-4 z-50">
           <div className="bg-white rounded-lg max-w-md w-full max-h-[90vh] overflow-y-auto">
             {/* Modal Header */}
             <div className="flex justify-between items-center p-6 border-b">

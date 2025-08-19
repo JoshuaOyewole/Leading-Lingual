@@ -17,7 +17,10 @@ export const EquippedSection = () => {
     setShowModal(false);
   };
   return (
-    <section className="bg-gray-900 py-8 sm:py-12 md:py-16 lg:py-20 px-3 sm:px-4 md:px-6 lg:px-8">
+    <section
+      id="enrol"
+      className="bg-gray-900 py-8 sm:py-12 md:py-16 lg:py-20 px-3 sm:px-4 md:px-6 lg:px-8"
+    >
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row items-center gap-6 sm:gap-8 lg:gap-12 xl:gap-16">
           <div className="w-full lg:w-1/2 text-white order-2 lg:order-1">

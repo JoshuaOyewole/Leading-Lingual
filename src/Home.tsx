@@ -1,5 +1,5 @@
 import { Amenities } from "./Amenities";
-import { EquippedSection } from "./Equipped";
+// import { EquippedSection } from "./Equipped";
 import { Programmes } from "./Programmes";
 import { Partnership } from "./Partnership";
 import Hero from "./Reusable/Hero";
@@ -8,6 +8,7 @@ import { Navigation } from "./navbar";
 import { Testimonials } from "./Testimonials";
 import background from "./../public/asset/background.jpg";
 import { Footer } from "./footer";
+import { EquippedSection } from "./Equipped";
 const LearningInstitute = () => {
   return (
     <div className="min-h-screen bg-gray-50">
