@@ -36,7 +36,7 @@ export const EquippedSection = () => {
             </h1>
 
             <p className="text-gray-300 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base md:text-lg">
-              Leading Lingual is a dynamic platform for aspiring and tech
+              Thriving in Tech by Leading Lingual is a dynamic platform for aspiring and tech
               newcomers committed to professional excellence in technology, and
               career advancement. We bridge skill gaps, promote competence, and
               prepare individuals through quality training, personalized

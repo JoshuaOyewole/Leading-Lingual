@@ -7,6 +7,7 @@ export const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [activeSection, setActiveSection] = React.useState("home");
 
+
   const navItems = [
     { label: "Home", href: "home" },
     { label: "Programmes", href: "programmes" },
@@ -14,6 +15,8 @@ export const Navigation = () => {
     { label: "Testimonials", href: "testimonials" },
     { label: "Partnership", href: "partnership" },
   ];
+
+
 
   React.useEffect(() => {
     if (isMenuOpen) {
@@ -96,15 +99,16 @@ export const Navigation = () => {
 
   return (
     <>
-      {/* Modern navigation with glassmorphism */}
-      <nav className="glass fixed top-4 left-4 right-4 sm:left-6 sm:right-6 md:left-8 md:right-8 z-50 rounded-2xl shadow-xl border border-white/20">
+      {/* Modern navigation with dynamic background */}
+      <nav className={`fixed sm:top-4 right-4 sm:left-6 sm:right-6 md:w-[95%] md:left-5 md:right-8 z-50 md:rounded-2xl shadow-xl border transition-all duration-500
+           bg-gray-900/95 backdrop-blur-md border-gray-700/50 w-full left-0 top-0 rounded-none`}>
         <div className="flex items-center justify-between p-4 sm:p-5 md:p-6">
           {/* Enhanced Logo */}
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg animate-glow">
               <img src={logo} alt="Leading Lingual Logo" className="w-8 h-8 sm:w-10 sm:h-10 object-cover rounded-lg" />
             </div>
-            <span className="hidden sm:block text-white font-bold text-lg md:text-xl">Leading Lingual</span>
+            <span className="hidden sm:block text-white font-bold text-lg md:text-xl"> TIT</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -157,14 +161,14 @@ export const Navigation = () => {
             className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden transition-opacity duration-300"
             onClick={closeMenu}
           />
-          <div className="fixed top-4 right-4 h-auto w-80 sm:w-96 max-w-[90vw] glass-dark rounded-2xl shadow-2xl lg:hidden z-45 transform transition-all duration-300 ease-out animate-slide-up">
+          <div className={`fixed top-4 right-4 h-auto w-80 sm:w-96 max-w-[90vw] rounded-2xl shadow-2xl lg:hidden z-45 transform transition-all duration-300 ease-out animate-slide-up bg-gray-900/95 backdrop-blur-md`}>
             <div className="p-6 pt-8">
               {/* Mobile logo */}
               <div className="flex items-center gap-3 mb-8 pb-4 border-b border-white/20">
                 <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
                   <img src={logo} alt="logo" className="w-6 h-6 object-cover rounded" />
                 </div>
-                <span className="text-white font-bold text-lg">Leading Lingual</span>
+                <span className="text-white font-bold text-lg">TIT by Leading Lingual</span>
               </div>
               
               <ul className="flex flex-col gap-2">

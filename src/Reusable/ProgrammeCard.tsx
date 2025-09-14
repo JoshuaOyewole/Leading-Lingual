@@ -59,7 +59,7 @@ export const ProgrammeCard = ({
           <div className="space-y-3 mb-8">
             <h4 className="text-sm font-semibold text-gray-800 uppercase tracking-wide">What You'll Learn:</h4>
             <ul className="space-y-2">
-              {features.slice(0, 4).map((feature, index) => (
+              {features.map((feature, index) => (
                 <li
                   key={index}
                   className="flex items-start text-sm sm:text-base text-gray-700 group-hover:text-gray-800 transition-colors duration-300"
@@ -68,18 +68,14 @@ export const ProgrammeCard = ({
                   <span>{feature}</span>
                 </li>
               ))}
-              {features.length > 4 && (
-                <li className="text-sm text-gray-500 ml-7">
-                  +{features.length - 4} more skills
-                </li>
-              )}
+            
             </ul>
           </div>
         </div>
 
         {/* CTA Button */}
         <Button
-          className="group/btn w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white py-3 sm:py-4 text-sm sm:text-base font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
+          className="group/btn h-12 w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white py-3 sm:py-4 text-sm sm:text-base font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
           onClick={handleClick}
         >
           <span className="flex items-center justify-center gap-2">

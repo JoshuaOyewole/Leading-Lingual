@@ -28,7 +28,7 @@ export const Partnership = () => {
           
           <div className="max-w-4xl mx-auto">
             <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 animate-slide-up animation-delay-200">
-              Leading Lingual collaborates with schools, corporate training
+              Thriving in Tech by Leading Lingual collaborates with schools, corporate training
               organizations, recruitment firms, and tech hubs to expand
               opportunities for learners and professionals.
             </p>

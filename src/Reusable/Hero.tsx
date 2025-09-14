@@ -4,7 +4,7 @@ import bg from "./../../public/asset/herro.jpg";
 
 const Hero = () => {
   return (
-    <div className="relative h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] xl:h-[800px] mx-2 sm:mx-4 md:mx-6 lg:mx-8 mt-4 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl">
+    <div className="relative h-[80vh]  md:h-[85vh] lg:h-[700px] xl:h-[800px] mx-2 sm:mx-4 md:mx-6 lg:mx-8 mt-4 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl">
       {/* Background with gradient overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center transition-transform duration-700 hover:scale-105"
@@ -38,7 +38,7 @@ const Hero = () => {
           {/* Main heading with animation */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight animate-slide-up">
             <span className="bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent">
-              Leading Lingual
+             Thriving in Tech by <span className="md:block text-white">Leading Lingual</span>
             </span>
           </h1>
           
@@ -51,11 +51,11 @@ const Hero = () => {
           
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 animate-slide-up animation-delay-400">
-            <Button className="group bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <Button className="group h-12 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               Get Started Today
               <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button variant="outline" className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-xl transition-all duration-300">
+            <Button variant="outline" className="bg-white/10 h-12 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-xl transition-all duration-300">
               Watch Our Story
             </Button>
           </div>

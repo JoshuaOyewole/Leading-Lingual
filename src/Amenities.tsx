@@ -44,7 +44,7 @@ export const Amenities = () => {
         <div className="text-center mb-16 sm:mb-20">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full px-4 py-2 mb-6">
             <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
-            <span className="text-sm font-medium text-gray-700">About Leading Lingual</span>
+            <span className="text-sm font-medium text-gray-700">About Thriving in Tech by Leading Lingual</span>
           </div>
           
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-8 animate-slide-up">
@@ -55,13 +55,13 @@ export const Amenities = () => {
           
           <div className="max-w-4xl mx-auto">
             <p className="text-lg sm:text-xl md:text-2xl leading-relaxed text-gray-600 mb-8 animate-slide-up animation-delay-200">
-              Leading Lingual is a premier training and mentoring institute committed
+             Thriving in Tech by Leading Lingual is a premier training and mentoring institute committed
               to professional excellence in education, technology, language
               acquisition, and career advancement.
             </p>
             
             <p className="text-base sm:text-lg leading-relaxed text-gray-500 animate-slide-up animation-delay-400">
-              Headquartered in Lagos, Nigeria and legally registered in Mauritius, Leading Lingual serves as a dynamic
+              Headquartered in Lagos, Nigeria and legally registered in Mauritius, Thriving in Tech by Leading Lingual serves as a dynamic
               platform for aspiring educators, tech newcomers, language learners, and
               job seekers seeking expert mentorship and practical coaching. Our
               mission is to bridge skill gaps, promote global competence, and prepare

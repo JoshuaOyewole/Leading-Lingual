@@ -69,7 +69,7 @@ export const Footer = () => {
                 className="flex items-center space-x-3 text-gray-300 hover:text-blue-400 transition-colors"
               >
                 <Facebook className="w-5 h-5" />
-                <span>Leading Lingual Institute</span>
+                <span>Thrinving in Tech by Leading Lingual Institute</span>
               </a>
               <a
                 href="https://linkedin.com/company/leading-lingual-global"
@@ -78,7 +78,7 @@ export const Footer = () => {
                 className="flex items-center space-x-3 text-gray-300 hover:text-blue-500 transition-colors"
               >
                 <Linkedin className="w-5 h-5" />
-                <span>Leading Lingual Global</span>
+                <span>Thriving in Tech by Leading Lingual Global</span>
               </a>
             </div>
             <div className="mt-4">
