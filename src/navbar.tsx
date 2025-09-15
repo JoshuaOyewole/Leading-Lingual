@@ -7,6 +7,7 @@ export const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [activeSection, setActiveSection] = React.useState("home");
 
+
   const navItems = [
     { label: "Home", href: "home" },
     { label: "Programmes", href: "programmes" },
@@ -14,6 +15,8 @@ export const Navigation = () => {
     { label: "Testimonials", href: "testimonials" },
     { label: "Partnership", href: "partnership" },
   ];
+
+
 
   React.useEffect(() => {
     if (isMenuOpen) {
@@ -96,79 +99,99 @@ export const Navigation = () => {
 
   return (
     <>
-      <nav className="flex items-center justify-between p-3 sm:p-4 md:p-6 lg:p-8 relative z-50">
-        {/* Logo */}
-        <div className="flex items-center">
-          <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-red-500 rounded-lg flex items-center justify-center">
-            <img src={logo} alt="logo" />
+      {/* Modern navigation with dynamic background */}
+      <nav className={`fixed sm:top-4 right-4 sm:left-6 sm:right-6 md:w-[95%] md:left-5 md:right-8 z-50 md:rounded-2xl shadow-xl border transition-all duration-500
+           bg-gray-900/95 backdrop-blur-md border-gray-700/50 w-full left-0 top-0 rounded-none`}>
+        <div className="flex items-center justify-between p-4 sm:p-5 md:p-6">
+          {/* Enhanced Logo */}
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg animate-glow">
+              <img src={logo} alt="Leading Lingual Logo" className="w-8 h-8 sm:w-10 sm:h-10 object-cover rounded-lg" />
+            </div>
+            <span className="hidden sm:block text-white font-bold text-lg md:text-xl"> TIT</span>
           </div>
-        </div>
 
-        {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center gap-8 xl:gap-12">
-          <ul className="flex gap-4 xl:gap-8 items-center">
-            {navItems.map((item) => (
-              <li key={item.label}>
-                <button
-                  onClick={() => handleNavClick(item.href)}
-                  className={`text-gray-800 hover:text-red-500 transition-colors font-medium text-sm xl:text-base ${
-                    activeSection === item.href ? "text-red-500" : ""
-                  }`}
-                >
-                  {item.label}
-                </button>
-              </li>
-            ))}
-          </ul>
-          <Button
-            className="bg-red-500 hover:bg-red-600 text-white px-4 xl:px-6 py-2 text-sm xl:text-base rounded-lg"
-            onClick={handleEnrolClick}
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center gap-8 xl:gap-12">
+            <ul className="flex gap-6 xl:gap-8 items-center">
+              {navItems.map((item) => (
+                <li key={item.label}>
+                  <button
+                    onClick={() => handleNavClick(item.href)}
+                    className={`relative text-white/90 hover:text-white transition-all duration-300 font-medium text-sm xl:text-base py-2 px-3 rounded-lg hover:bg-white/10 ${
+                      activeSection === item.href 
+                        ? "text-white bg-white/20 shadow-md" 
+                        : ""
+                    }`}
+                  >
+                    {item.label}
+                    {activeSection === item.href && (
+                      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></div>
+                    )}
+                  </button>
+                </li>
+              ))}
+            </ul>
+            <Button
+              className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-6 xl:px-8 py-2.5 text-sm xl:text-base rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
+              onClick={handleEnrolClick}
+            >
+              Enrol Now
+            </Button>
+          </div>
+
+          {/* Enhanced Mobile Menu Button */}
+          <button
+            className="lg:hidden z-50 relative p-3 rounded-xl bg-white/10 hover:bg-white/20 transition-all duration-300"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            Enrol
-          </Button>
+            {isMenuOpen ? (
+              <X className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+            ) : (
+              <Menu className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+            )}
+          </button>
         </div>
-
-        {/* Mobile/Tablet Menu Button */}
-        <button
-          className="lg:hidden z-50 relative p-2"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          {isMenuOpen ? (
-            <X className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
-          ) : (
-            <Menu className="w-5 h-5 sm:w-6 sm:h-6" />
-          )}
-        </button>
       </nav>
 
-      {/* Mobile/Tablet Navigation Overlay */}
+      {/* Enhanced Mobile Navigation */}
       {isMenuOpen && (
         <>
           <div
-            className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden transition-opacity duration-300"
             onClick={closeMenu}
           />
-          <div className="fixed top-0 right-0 h-full w-72 sm:w-80 md:w-96 max-w-[85vw] bg-white shadow-2xl lg:hidden z-45 transform transition-transform duration-300 ease-in-out">
-            <div className="p-4 sm:p-6 pt-16 sm:pt-20">
-              <ul className="flex flex-col gap-4 sm:gap-6">
+          <div className={`fixed top-4 right-4 h-auto w-80 sm:w-96 max-w-[90vw] rounded-2xl shadow-2xl lg:hidden z-45 transform transition-all duration-300 ease-out animate-slide-up bg-gray-900/95 backdrop-blur-md`}>
+            <div className="p-6 pt-8">
+              {/* Mobile logo */}
+              <div className="flex items-center gap-3 mb-8 pb-4 border-b border-white/20">
+                <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                  <img src={logo} alt="logo" className="w-6 h-6 object-cover rounded" />
+                </div>
+                <span className="text-white font-bold text-lg">TIT by Leading Lingual</span>
+              </div>
+              
+              <ul className="flex flex-col gap-2">
                 {navItems.map((item) => (
                   <li key={item.label}>
                     <button
                       onClick={() => handleNavClick(item.href)}
-                      className={`text-gray-800 hover:text-red-500 transition-colors font-medium block py-2 sm:py-3 text-base sm:text-lg border-b border-gray-100 w-full text-left ${
-                        activeSection === item.href ? "text-red-500" : ""
+                      className={`text-white/90 hover:text-white hover:bg-white/10 transition-all duration-300 font-medium block py-3 px-4 text-base rounded-xl w-full text-left ${
+                        activeSection === item.href 
+                          ? "text-white bg-white/20 shadow-md" 
+                          : ""
                       }`}
                     >
                       {item.label}
                     </button>
                   </li>
                 ))}
-                <li className="mt-4">
+                <li className="mt-6 pt-4 border-t border-white/20">
                   <button
-                    className="bg-red-500 hover:bg-red-600 text-white w-full py-2 sm:py-3 text-base sm:text-lg rounded-lg"
+                    className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white w-full py-3 text-base rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 font-medium"
                     onClick={handleEnrolClick}
                   >
-                    Enrol
+                    Enrol Now
                   </button>
                 </li>
               </ul>

@@ -11,19 +11,21 @@ import { Footer } from "./footer";
 import { EquippedSection } from "./Equipped";
 const LearningInstitute = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50">
       <header
         id="home"
-        className="relative bg-cover bg-center pb-8"
+        className="relative bg-cover bg-center min-h-screen"
         style={{
           backgroundImage: `url(${background})`,
         }}
       >
         <Navigation />
-        <Hero />
+        <div className="pt-24 sm:pt-28 md:pt-32">
+          <Hero />
+        </div>
       </header>
 
-      <main>
+      <main className="relative">
         <Amenities />
         <EquippedSection />
         <Programmes />
