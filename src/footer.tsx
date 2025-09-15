@@ -65,13 +65,22 @@ export const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Follow Us</h4>
             <div className="space-y-3">
               <a
-                href="https://instagram.com/leadinglingual"
+                href="https://www.instagram.com/leading_lingual?igsh=MWN3NGZ5czdkaDM3cA=="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-3 text-gray-300 hover:text-pink-400 transition-colors"
               >
                 <Instagram className="w-5 h-5" />
                 <span>@leadinglingual</span>
+              </a>
+              <a
+                href="https://www.instagram.com/thrivingintechseries?igsh=MWtuZWYwdHdlMDBvaw=="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-3 text-gray-300 hover:text-pink-400 transition-colors"
+              >
+                <Instagram className="w-5 h-5" />
+                <span>@thrivingintech</span>
               </a>
               <a
                 href="https://facebook.com/leadinglingual"
