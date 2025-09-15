@@ -27,22 +27,29 @@ export const Footer = () => {
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-blue-400" />
                 <a
-                  href="mailto:leadinglingual@gmail.com"
+                  href="mailto:leadinglingualng@gmail.com"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
-                  leadinglingual@gmail.com
+                  leadinglingualng@gmail.com
                 </a>
+<a
+                  href="mailto:thrivingintech@gmail.com"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  thrivingintech@gmail.com
+                </a>
+                
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-green-400" />
                 <div className="text-gray-300">
-                  <p>+234-809-000-0000</p>
+                  <p> +2348059286631, +2349129847245</p>
                   <p className="text-sm">
                     <a
-                      href="https://wa.me/2348059286631"
+                      href="https://wa.me/2349155982500"
                       className="text-green-400 hover:text-green-300 transition-colors"
                     >
-                      +2348059286631 (WhatsApp Only)
+                     +2349155982500 (WhatsApp Only)
                     </a>
                   </p>
                 </div>
