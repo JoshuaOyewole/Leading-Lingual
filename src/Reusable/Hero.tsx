@@ -1,5 +1,4 @@
-import { Button } from "@/components/ui/button";
-import Link from "next/link"
+import Link from 'next/link';
 import { ChevronRight, Sparkles, Globe, BookOpen, Users } from "lucide-react";
 import bg from "./../../public/asset/herro.jpg";
 
