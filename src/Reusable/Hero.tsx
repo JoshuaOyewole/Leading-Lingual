@@ -65,7 +65,7 @@ const Hero = () => {
           
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 animate-slide-up animation-delay-400">
-            <Button className="group h-12 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <Button onClick={handleEnrolClick} className="group h-12 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               Get Started Today
               <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
