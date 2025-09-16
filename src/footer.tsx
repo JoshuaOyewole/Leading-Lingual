@@ -38,10 +38,10 @@ export const Footer = () => {
                 <Mail className="w-5 h-5 text-blue-400" />
                
 <a
-                  href="mailto:thrivingintech@gmail.com"
+                  href="mailto:thrivinginTechseries@gmail.com"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
-                  thrivingintech@gmail.com
+                 thrivinginTechseries@gmail.com
                 </a>
               </div>
               <div className="flex items-center space-x-3">
